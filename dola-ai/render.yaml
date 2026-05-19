@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dola-ai
+    runtime: node
+    plan: standard
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OPENAI_API_KEY
+        scope: run
+        value: (set in dashboard)
+      - key: NODE_ENV
+        value: production
